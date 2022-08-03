@@ -1,0 +1,49 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Person {
+  id: Int!
+  firstName: String
+  lastName: String
+  email: String!
+}
+
+type EventRole {
+  id: Int!
+  roleName: String!
+  person: Person!
+}
+
+type Event {
+  id: Int!
+  eventName: String!
+  roles: [EventRole]!
+}
+
+type Community {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Query {
+  getEventPulse(id: Float): Event!
+  community(id: Int!): Community!
+}
+
+type Mutation {
+  createCommunity(createCommunityInput: CreateCommunityInput!): Community!
+  updateCommunity(updateCommunityInput: UpdateCommunityInput!): Community!
+  removeCommunity(id: Int!): Community!
+}
+
+input CreateCommunityInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateCommunityInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
